@@ -1,8 +1,8 @@
 function IsikuAndmed() {
     return (
-        <div className='col row Header goodPadding stickyHeader'>
-            <div className='col PrimText text-start GoodVisText'>Maire</div>
-            <div className='col text-end GoodVisText'>
+        <div className='cols12 row Header goodPadding stickyHeader'>
+            <div className='col PrimText text-start GoodVisText left-align'>Maire</div>
+            <div className='col text-end GoodVisText right'>
                 <button className="btn btn-primary">
                     Add
                 </button>

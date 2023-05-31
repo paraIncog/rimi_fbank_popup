@@ -39,23 +39,25 @@ function OstukorvMain() {
       }
   ])
 
-    const lisaToode = (index, tooteNimi, tooteKogus, tavaHind, tooteKoguHind) => {
+    const lisaToode = (tooteNimi, tooteKogus, tavaHind, tooteKoguHind) => {
     const uusToode = {
-        index: index,
+        index: toode.length,
         tooteNimi: tooteNimi,
         tavaHind: tavaHind,
         tooteKogus: tooteKogus,
         tooteKoguHind: tooteKoguHind
     }
+    console.log('CP3', uusToode, tavaHind)
     const uusTooteMassiiv = [...toode, uusToode]
     setToode(uusTooteMassiiv)
     }
 
     return (
-        <div className='container col'>
+        <div className='cols12'>
             <IsikuAndmed />
             <TooteKirjeldus toode={toode} />
             <LisaToode lisaToode={lisaToode} />
+            <div className='row deadSpace' />
             <OstukorviKoguandmed />
         </div>
     );

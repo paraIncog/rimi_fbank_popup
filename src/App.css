@@ -33,6 +33,31 @@
     width: 100%;
 }
 
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.deadSpace {
+    height: 10rem;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.page-footer {
+    color: black;
+}
+
 .btn {
     border-radius: 0;
 }

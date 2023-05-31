@@ -7,16 +7,17 @@ function LisaToode({lisaToode}) {
     const [tooteKoguHind, setTootekoguHind] = useState(tooteKogus * tavaHind)
 
     const tooteAndmeteLisamine = (event) => {
+        console.log('CP2', tavaHind, tooteKogus)
         event.preventDefault()
         lisaToode(tooteNimi, tooteKogus, tavaHind, tooteKoguHind)
         setTooteNimi('')
         setTooteKogus(1)
-        setTavaHind(0)
+        setTavaHind()
         setTootekoguHind(tooteKogus * tavaHind)
     }
 
     return (
-        <div className="goodPadding">
+        <div className="goodPadding card-panel pink black-text">
             <form onSubmit={tooteAndmeteLisamine}>
                 <div className="row">
                     <div className="col-10">
