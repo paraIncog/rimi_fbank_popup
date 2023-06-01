@@ -4,7 +4,7 @@ import OstukorvMain from './Ostukorv/OstukorvMain';
 
 function App() {
   return (
-    <div className="">
+    <div>
       <OstukorvMain />
       {/* <PopupMain /> */}
     </div>

@@ -3,7 +3,7 @@ import M from 'materialize-css'
 let instance
 
 function initModal() {
-    console.log('Kutsu välja initModal')
+    console.log('Call initModal')
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems, {});
 }
