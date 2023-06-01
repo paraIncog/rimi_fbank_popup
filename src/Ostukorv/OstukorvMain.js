@@ -39,6 +39,8 @@ function OstukorvMain() {
       }
   ])
 
+  const kaubad = [...toode]
+
     const lisaToode = (tooteNimi, tooteKogus, tavaHind, tooteKoguHind) => {
     const uusToode = {
         index: toode.length,
@@ -53,7 +55,7 @@ function OstukorvMain() {
     }
 
     return (
-        <div className='cols12'>
+        <div className='col-s12'>
             <IsikuAndmed />
             <TooteKirjeldus toode={toode} />
             <LisaToode lisaToode={lisaToode} />

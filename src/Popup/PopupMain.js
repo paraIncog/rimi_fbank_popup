@@ -28,9 +28,6 @@ function PopupMain() {
                     <PopupMessage />
                     <PopupChoice />
                 </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                </div>
             </div>
 
             
