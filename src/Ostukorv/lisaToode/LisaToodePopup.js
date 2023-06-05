@@ -6,8 +6,8 @@ let instance
 
 function initModal() {
     console.log('Call initModal')
-    let elems = document.querySelectorAll('.modal');
-    let instances = M.Modal.init(elems, {});
+    const elems = document.querySelectorAll('.modal');
+    M.Modal.init(elems, {});
 }
 
 function openModal() {
