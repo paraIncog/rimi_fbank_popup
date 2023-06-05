@@ -6,15 +6,15 @@ let instance
 
 function initModal() {
     console.log('Call initModal')
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, {});
+    let elems = document.querySelectorAll('.modal');
+    let instances = M.Modal.init(elems, {});
 }
 
 function openModal() {
     instance.open();
 }
 
-function PopupMain() {
+function PopupDonationMain() {
     setTimeout(initModal, 200)
     return (
         <div className='row'>
@@ -29,10 +29,8 @@ function PopupMain() {
                     <PopupChoice />
                 </div>
             </div>
-
-            
         </div>
     )
 }
 
-export default PopupMain
+export default PopupDonationMain
