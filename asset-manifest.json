@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/rimi_fbank_popup/static/css/main.ab8c8dcc.css",
-    "main.js": "/rimi_fbank_popup/static/js/main.2ea6dae7.js",
+    "main.css": "/rimi_fbank_popup/static/css/main.459bd24f.css",
+    "main.js": "/rimi_fbank_popup/static/js/main.0001f5f1.js",
     "static/js/787.5a7e7066.chunk.js": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js",
     "static/media/steak_image.jpg": "/rimi_fbank_popup/static/media/steak_image.6fb31406ac94f6e6b23d.jpg",
     "static/media/apple_image.jpg": "/rimi_fbank_popup/static/media/apple_image.ad03bcb50f14476af9d6.jpg",
     "static/media/carrot_image.jpg": "/rimi_fbank_popup/static/media/carrot_image.a9086e270cd4e97a9e13.jpg",
     "index.html": "/rimi_fbank_popup/index.html",
-    "main.ab8c8dcc.css.map": "/rimi_fbank_popup/static/css/main.ab8c8dcc.css.map",
-    "main.2ea6dae7.js.map": "/rimi_fbank_popup/static/js/main.2ea6dae7.js.map",
+    "main.459bd24f.css.map": "/rimi_fbank_popup/static/css/main.459bd24f.css.map",
+    "main.0001f5f1.js.map": "/rimi_fbank_popup/static/js/main.0001f5f1.js.map",
     "787.5a7e7066.chunk.js.map": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab8c8dcc.css",
-    "static/js/main.2ea6dae7.js"
+    "static/css/main.459bd24f.css",
+    "static/js/main.0001f5f1.js"
   ]
 }
