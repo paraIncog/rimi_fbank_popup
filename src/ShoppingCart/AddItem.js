@@ -18,18 +18,10 @@ function AddItem({ handleAddItem }) {
     let [itemQuantity, setItemQuantity] = useState()
     let [itemPrice, setItemPrice] = useState()
     let [itemTotalPrice, setItemTotalPrice] = useState(itemQuantity * itemPrice)
-    // let [inputDisabled, setInputDisabled] = useState(0)
-    console.log('CP5', itemName, itemQuantity, itemPrice)
-    console.log('CP6', handleAddItem)
 
     const addCarrots = () => {
         handleAddItem({name: 'Carrot', quantity: 1, price: 1.21, totalPrice: itemQuantity * itemPrice})
     }
-
-    const addApples = () => {
-        handleAddItem({name: 'Apple', quantity: 1, price: 0.55, totalPrice: itemQuantity * itemPrice})
-    }
-    
 
     const addSteak = () => {
         handleAddItem({name: 'Steak', quantity: 1, price: 2.29, totalPrice: itemQuantity * itemPrice})
@@ -41,7 +33,7 @@ function AddItem({ handleAddItem }) {
     }
 
     const yesDonationApple = () => {
-        handleAddItem({name: 'Apple to be Donated', quantity: 1, price: 0.30, totalPrice: itemQuantity * itemPrice})
+        handleAddItem({name: 'Apple to be Donated', quantity: 1, price: 0.30, totalPrice: itemQuantity * itemPrice, isDonation: 1})
         console.log('Cp20', yesDonationApple)
     }
 
@@ -76,53 +68,8 @@ function AddItem({ handleAddItem }) {
                     </div>
                 </div>
             </div>
-            {/* <div>
-                <div className="row center-align">
-                    <button>
-                        Read Data
-                    </button>
-                </div>
-            </div> */}
             <PopupModal yesDonation={yesDonationApple} noDonation={noDonationApple} />
         </div>
-
-        // <div className="goodPadding yellow">
-        //     <div className="row center-align">
-        //         <div className="col s4">
-        //             <div onClick={addCarrots} className="">
-        //                 <img src={carrotImage} alt='Carrot' className="itemImage row" />
-        //                 <div className="row">
-        //                     Add 1 Carrot
-        //                 </div>
-        //             </div>
-        //         </div>
-        //         <div className="col s4">
-        //             <div onClick={addApples} className="">
-        //                 <img src={appleImage} alt='Apple' className="itemImage row" />
-        //                 <div className="row">
-        //                     Add 1 Apple
-        //                 </div>
-        //             </div>
-        //         </div>
-        //         <div className="col s4">
-        //             <div onClick={addSteak} className="">
-        //                 <img src={steakImage} alt='Steak' className="itemImage row" />
-        //                 <div className="row">
-        //                     Add 1 Steak
-        //                 </div>
-        //             </div>
-        //         </div>
-
-        //     </div>
-        //     <div>
-        //     <div className="row center-align">
-        //             <button onClick={readGivenData}>
-        //                 Read Data
-        //             </button>
-        //         </div>
-        //     </div>
-        // </div>
-
     )
 }
 

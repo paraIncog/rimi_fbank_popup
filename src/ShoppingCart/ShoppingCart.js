@@ -10,6 +10,7 @@ function ShoppingCart() {
     let itemQuantity;
     let itemPrice;
     let itemTotalPrice;
+    let isDonation;
     const [item, setItem] = useState([
         {
             id: 0,
@@ -23,7 +24,8 @@ function ShoppingCart() {
             itemName: 'Apple',
             itemQuantity: 1,
             itemPrice: 0.55,
-            itemTotalPrice: itemPrice * itemQuantity
+            itemTotalPrice: itemPrice * itemQuantity,
+            isDonation: 1
         },
         {
             id: 2,
@@ -43,7 +45,7 @@ function ShoppingCart() {
 
   const onItemAdd = (e) => {
     console.log('CP8', e)
-    const newItemList = [...item, {itemName:e.name, itemPrice:e.price, itemQuantity:e.quantity, index:item.length}]
+    const newItemList = [...item, {itemName:e.name, itemPrice:e.price, itemQuantity:e.quantity, index:item.length, isDonation:e.isDonation}]
     console.log('CP11', newItemList)
     setItem(newItemList)
   }

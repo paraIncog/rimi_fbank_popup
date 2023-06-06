@@ -6,28 +6,7 @@ function initModal() {
     let instances = M.Modal.init(elems, {});
 }
 
-let donatesApples = false
-console.log('Donation Modal Activated')
-if (donatesApples === false) {
-    console.log('Has not donated')
-}
-
-
-function donatesApplesYes({ yesDonation }) {
-    console.log('Willing to donate', yesDonation)
-    
-    // setItemName('Apple with Donation')
-    // setItemQuantity(1 * 2)
-    // setItemPrice(0.55 * 2)
-    // setItemTotalPrice(itemQuantity * itemPrice)
-}
-
-function donatesApplesNo({noDonation}) {
-    console.log('Not willing to donate', noDonation)
-}
-
 function PopupModal({ yesDonation, noDonation }) {
-    console.log('Willing to donate')
     setTimeout(initModal, 200)
     return (
         <div id="modalDonation" className="modal">

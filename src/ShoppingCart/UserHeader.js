@@ -1,6 +1,4 @@
 import globe from '../icons/globe-solid1.png'
-import donateIcon from '../icons/donation_dollar.png'
-import PopupModal from './PopupModal'
 
 function UserHeader() {
     return (
@@ -11,7 +9,6 @@ function UserHeader() {
             <div className="col s6 right-align">
                 <img src={globe} alt="globe" className='globeItem' />
             </div>
-            {/* <PopupModal /> */}
         </div>
     )
 }

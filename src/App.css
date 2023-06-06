@@ -9,6 +9,10 @@ body {
     padding: 1rem;
 }
 
+.cartItemDonation {
+    background-color: lightgreen;
+}
+
 .Header {
     background-color: rgb(207, 2, 2);
     color: white;
