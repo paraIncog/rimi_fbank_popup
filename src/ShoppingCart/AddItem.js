@@ -1,20 +1,20 @@
 import { useState } from "react"
-// import M from "materialize-css"
+import M from "materialize-css"
 
 import carrotImage from '../itemPictures/carrot_image.jpg'
 import appleImage from '../itemPictures/apple_image.jpg'
 import steakImage from '../itemPictures/steak_image.jpg'
 import PopupModal from "./PopupModal"
 
-// function initModal() {
-//     let elems = document.querySelectorAll('.modal');
-//     M.Modal.init(elems, {});
-// }
+function initModal() {
+    let elems = document.querySelectorAll('.modal');
+    M.Modal.init(elems, {});
+}
 
-//  let donatesApples = false
+ let donatesApples = false
 
 function AddItem({ addItem, item }) {
-    // setTimeout(initModal, 200)
+    setTimeout(initModal, 200)
 
     let [itemName, setItemName] = useState('')
     let [itemQuantity, setItemQuantity] = useState()
@@ -62,38 +62,42 @@ function AddItem({ addItem, item }) {
     }
 
 
-    // function donationModal() {
-    //     function donatesApplesYes() {
-    //         if (donatesApples === true) {
-    //             console.log('Willing to donate')
-    //             setTimeout(200)
-    //             setItemName('Apple with Donation')
-    //             setItemQuantity(1 * 2)
-    //             setItemPrice(0.55 * 2)
-    //             setItemTotalPrice(itemQuantity * itemPrice)
-    //             console.log(itemName, itemQuantity, itemPrice, itemTotalPrice)
-    //             console.log(addApplestoDonation)
-    //         }
-    //         addItem(itemName, itemQuantity, itemPrice, itemTotalPrice)
-    //     }
+    const donationModal = () => {
+        function donatesApplesYes() {
+            if (donatesApples === true) {
+                console.log('Willing to donate')
+                setTimeout(initModal, 200)
+                setItemName('Apple with Donation')
+                setItemQuantity(1 * 2)
+                setItemPrice(0.55 * 2)
+                setItemTotalPrice(itemQuantity * itemPrice)
+                console.log(itemName, itemQuantity, itemPrice, itemTotalPrice)
+                console.log(addApplestoDonation)
+            }
+            addItem(itemName, itemQuantity, itemPrice, itemTotalPrice)
+        }
 
-    //     console.log('Donation Modal Activated')
-    //     if (donatesApples === false) {
-    //         console.log('Has not donated')
-    //         return (
-    //             <div id="modalDonation" class="modal">
-    //                 <div class="modal-content">
-    //                     <h6 className="center-align">Would You like to donate Apples (0.55 €) to Foodbank?</h6>
-    //                     <h6 className="row center-align">You'll get a discount for additional Apples.</h6>
-    //                     <div className="row">
-    //                         <button onClick={donatesApplesYes} className="modal-close btn col s6 green">Yes</button>
-    //                         <button href="#!" className="modal-close btn col s6 red">No</button>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         )
-    //     }
-    // }
+        console.log('Donation Modal Activated')
+        if (donatesApples === false) {
+            console.log('Has not donated')
+            return (
+                <div id="modalDonation" class="modal">
+                    <div class="modal-content">
+                        <h6 className="center-align">Would You like to donate Apples (0.55 €) to Foodbank?</h6>
+                        <h6 className="row center-align">You'll get a discount for additional Apples.</h6>
+                        <div className="row">
+                            <button onClick={donatesApplesYes} className="modal-close btn col s6 green">Yes</button>
+
+                            
+
+                            <button href="#!" className="modal-close btn col s6 red">No</button>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        console.log('donation finisthed')
+    }
     return (
         <div className="goodPadding card-panel black-text">
             <form onSubmit={addProductData}>
@@ -143,19 +147,19 @@ function AddItem({ addItem, item }) {
                         </div>
                     </div>
                 </div>
-                <div className="col s4">
+                {/* <div className="col s4">
                     <div onClick={addApples} className="">
                         <img src={appleImage} alt='Apple' className="itemImage row" />
                         <div className="row">
                             Add 1 Apple
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="col s4">
-                    <div onClick={addApplestoDonation}>
+                    <div onClick={donationModal} data-target="modalDonation" className="modal-trigger">
                         <img src={appleImage} alt='Apple' className="itemImage row" />
                         <div className="row">
-                            Donate apple to Foodbank
+                            Add 1 Apple
                         </div>
                     </div>
                 </div>
@@ -176,6 +180,7 @@ function AddItem({ addItem, item }) {
                 </div>
             </div> */}
             <PopupModal />
+            {/* {donationModal} */}
         </div>
 
         // <div className="goodPadding yellow">

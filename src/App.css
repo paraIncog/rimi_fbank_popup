@@ -66,3 +66,7 @@ main {
 .deadSpace {
     height: 10rem;
 }
+
+button.donation-confirm {
+    margin-right: 1rem;
+} 
