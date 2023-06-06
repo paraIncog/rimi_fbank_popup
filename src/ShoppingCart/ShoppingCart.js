@@ -41,6 +41,13 @@ function ShoppingCart() {
 //     }
 //   }
 
+  const onItemAdd = (e) => {
+    console.log('CP8', e)
+    const newItemList = [...item, {itemName:e.name, itemPrice:e.price, itemQuantity:e.quantity, index:item.length}]
+    console.log('CP11', newItemList)
+    setItem(newItemList)
+  }
+
   const addItem = (itemName, itemPrice, itemQuantity) => {
     const newItem = {
         index: item.length,
@@ -50,6 +57,7 @@ function ShoppingCart() {
     }
     console.log('addItem', newItem, itemPrice)
     const newItemMass = [...item, newItem]
+    console.log('new item mass', newItemMass)
     setItem(newItemMass)
   }
     return (
@@ -57,7 +65,7 @@ function ShoppingCart() {
             <UserHeader />
             {/* <EmptyCartEnable /> */}
             <CartItem item={item} />
-            <AddItem addItem={addItem} />
+            <AddItem handleAddItem={onItemAdd} />
             {/* <div className='row deadSpace' /> */}
             {/* <TallyFooter item={item} /> */}
         </div>

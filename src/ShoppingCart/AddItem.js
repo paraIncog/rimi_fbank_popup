@@ -13,7 +13,7 @@ function initModal() {
 
  let donatesApples = false
 
-function AddItem({ addItem, item }) {
+function AddItem({ handleAddItem }) {
     setTimeout(initModal, 200)
 
     let [itemName, setItemName] = useState('')
@@ -21,11 +21,14 @@ function AddItem({ addItem, item }) {
     let [itemPrice, setItemPrice] = useState()
     let [itemTotalPrice, setItemTotalPrice] = useState(itemQuantity * itemPrice)
     // let [inputDisabled, setInputDisabled] = useState(0)
+    console.log('CP5', itemName, itemQuantity, itemPrice)
+    console.log('CP6', handleAddItem)
 
     const addProductData = (event) => {
         console.log('addProductData', itemPrice, itemQuantity)
         event.preventDefault()
-        addItem(itemName, itemQuantity, itemPrice, itemTotalPrice)
+        
+        
         setItemName('')
         setItemQuantity(1)
         setItemPrice()
@@ -33,32 +36,19 @@ function AddItem({ addItem, item }) {
     }
 
     const addCarrots = () => {
-        setItemName('Carrot')
-        setItemQuantity(1)
-        setItemPrice(1.21)
-        setItemTotalPrice(itemQuantity * itemPrice)
+        handleAddItem({name: 'Carrot', quantity: 1, price: 1.21, totalPrice: itemQuantity * itemPrice})
     }
 
     const addApples = () => {
-        setItemName('Apple')
-        setItemQuantity(1)
-        setItemPrice(0.55)
-        setItemTotalPrice(itemQuantity * itemPrice)
+        handleAddItem({name: 'Apple', quantity: 1, price: 0.55, totalPrice: itemQuantity * itemPrice})
     }
 
     const addSteak = () => {
-        setItemName('Steak')
-        setItemQuantity(1)
-        setItemPrice(2.29)
-        setItemTotalPrice(itemQuantity * itemPrice)
+        handleAddItem({name: 'Steak', quantity: 1, price: 2.29, totalPrice: itemQuantity * itemPrice})
     }
 
     const addApplestoDonation = () => {
-        setItemName('Apple for Donation')
-        // setInputDisabled(1)
-        setItemQuantity(1)
-        setItemPrice(0.55 * 2)
-        setItemTotalPrice(itemQuantity * itemPrice)
+        handleAddItem({name: 'Apple', quantity: 1, price: 0.55, totalPrice: itemQuantity * itemPrice})
     }
 
 
@@ -74,7 +64,6 @@ function AddItem({ addItem, item }) {
                 console.log(itemName, itemQuantity, itemPrice, itemTotalPrice)
                 console.log(addApplestoDonation)
             }
-            addItem(itemName, itemQuantity, itemPrice, itemTotalPrice)
         }
 
         console.log('Donation Modal Activated')
@@ -100,7 +89,7 @@ function AddItem({ addItem, item }) {
     }
     return (
         <div className="goodPadding card-panel black-text">
-            <form onSubmit={addProductData}>
+            {/* <form onSubmit={addProductData}>
                 <div className="row">
                     <div className="col s12">
                         <h5>Product</h5>
@@ -136,8 +125,8 @@ function AddItem({ addItem, item }) {
                 <div className="row" />
                 {/* <div className="row">
                     <input className="btn modal-trigger" type="submit" value='Add Product' data-target="modalDonation" />
-                </div> */}
-            </form>
+                </div>
+            </form> */}
             <div className="row center-align">
                 <div className="col s4">
                     <div onClick={addCarrots} className="">
