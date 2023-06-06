@@ -1,22 +1,17 @@
-.ph_border {
-    border: 1px solid black;
-}
-
-.Header {
-    background-color: rgb(207, 2, 2);
-    color: white;
-}
-
-.PrimText {
-    text-transform: uppercase;
+body {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .goodPadding {
     padding: 1rem;
 }
 
-.finalTally {
-    background-color: ghostwhite;
+.Header {
+    background-color: rgb(207, 2, 2);
+    color: white;
 }
 
 .stickyHeader {
@@ -26,24 +21,16 @@
     top: 0;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+.divider {
+    background-color: darkgrey;
 }
 
-.page-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+label {
+    color: black
 }
 
-body {
-    position: relative;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+.goodVisText {
+    font-size: 1.2rem;
 }
 
 .deadSpace {
@@ -55,21 +42,27 @@ main {
 }
 
 .page-footer {
-    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 0.2rem grey solid;
 }
 
-.btn {
-    border-radius: 0;
+.emptyCartMsg {
+    padding-top: 50%;
+    font-size: 1.1rem;
 }
 
-.btn-danger {
-    background-color: rgb(207, 2, 2);
+.itemImage {
+    width: 7rem;
+    height: 7rem;
 }
 
-.btn-success {
-    background-color: green;
+.globeItem {
+    width: 5rem;
+    height: 5rem;
 }
 
-.GoodVisText {
-    font-size: 1.5rem;
+.deadSpace {
+    height: 10rem;
 }

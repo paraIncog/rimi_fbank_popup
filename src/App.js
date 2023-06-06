@@ -1,10 +1,10 @@
 import './App.css';
-import OstukorvMain from './Ostukorv/OstukorvMain';
+import ShoppingCart from './ShoppingCart/ShoppingCart'
 
 function App() {
   return (
     <div>
-      <OstukorvMain />
+      <ShoppingCart />
     </div>
   );
 }
