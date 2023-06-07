@@ -1,4 +1,7 @@
-function TallyFooter({item}) {
+let tallyTotalProducts
+let tallyTotalPrice
+
+function TallyFooter() {
     return (
         <div className="col s12 grey lighten-1 goodPadding page-footer">
             <div className="black-text goodVisText">
@@ -7,7 +10,7 @@ function TallyFooter({item}) {
                         Products
                     </div>
                     <div className="right-align col s6">
-                        {/* {tallyTotalProducts} */}
+                        {tallyTotalProducts}
                     </div>
                 </div>
                 <div className="row">
@@ -15,7 +18,7 @@ function TallyFooter({item}) {
                         Total
                     </div>
                     <div className="right-align col s6">
-                        {/* {tallyTotalPrice} € */}
+                        {tallyTotalPrice} €
                     </div>
                 </div>
             </div>

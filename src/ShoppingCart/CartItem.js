@@ -2,8 +2,6 @@ function CartItem({ item }) {
     return (
         item.map((item, index) => {
             const itemTotalPrice = item.itemQuantity * item.itemPrice
-            console.log('ItemName: ' + item.itemName + '\nQty: ' + item.itemQuantity + '\nIndex: ' + item.id + '\nPrice: ' + item.itemPrice + '\nTotal: ' + item.itemTotalPrice)
-            console.log('CartItem', item)
             if (item.isDonation === 1) {
                 return (
                     <>

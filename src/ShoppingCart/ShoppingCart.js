@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import CartItem from "./CartItem"
-import EmptyCart from "./EmptyCart"
+// import EmptyCart from "./EmptyCart"
 import TallyFooter from "./TallyFooter"
 import UserHeader from "./UserHeader"
 import AddItem from "./AddItem"
@@ -34,7 +34,7 @@ function ShoppingCart() {
             itemPrice: 2.25,
             itemTotalPrice: itemPrice * itemQuantity
         }
-  ], {itemTotalPrice: itemPrice * itemQuantity}, console.log(itemTotalPrice)
+  ], {itemTotalPrice: itemPrice * itemQuantity}
   )
 
 //   function EmptyCartEnable() {
@@ -44,9 +44,7 @@ function ShoppingCart() {
 //   }
 
   const onItemAdd = (e) => {
-    console.log('CP8', e)
     const newItemList = [...item, {itemName:e.name, itemPrice:e.price, itemQuantity:e.quantity, index:item.length, isDonation:e.isDonation}]
-    console.log('CP11', newItemList)
     setItem(newItemList)
   }
 
@@ -57,9 +55,7 @@ function ShoppingCart() {
         itemPrice: itemPrice,
         itemQuantity: itemQuantity
     }
-    console.log('addItem', newItem, itemPrice)
     const newItemMass = [...item, newItem]
-    console.log('new item mass', newItemMass)
     setItem(newItemMass)
   }
     return (
@@ -68,8 +64,8 @@ function ShoppingCart() {
             {/* <EmptyCartEnable /> */}
             <CartItem item={item} />
             <AddItem handleAddItem={onItemAdd} />
-            {/* <div className='row deadSpace' /> */}
-            {/* <TallyFooter item={item} /> */}
+            <div className='row deadSpace' />
+            <TallyFooter />
         </div>
     )
 }

@@ -50,6 +50,7 @@ main {
     bottom: 0;
     width: 100%;
     border-top: 0.2rem grey solid;
+    left: 0;
 }
 
 .emptyCartMsg {
@@ -63,8 +64,8 @@ main {
 }
 
 .globeItem {
-    width: 5rem;
-    height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
 }
 
 .deadSpace {
