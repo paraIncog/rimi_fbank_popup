@@ -13,11 +13,8 @@ function initModal() {
 
 function AddItem({ handleAddItem }) {
     setTimeout(initModal, 200)
-
-    let [itemName, setItemName] = useState('')
-    let [itemQuantity, setItemQuantity] = useState()
-    let [itemPrice, setItemPrice] = useState()
-    let [itemTotalPrice, setItemTotalPrice] = useState(itemQuantity * itemPrice)
+    let [itemQuantity] = useState()
+    let [itemPrice] = useState()
 
     const addCarrots = () => {
         handleAddItem({name: 'Carrot', quantity: 1, price: 1.21, totalPrice: itemQuantity * itemPrice})

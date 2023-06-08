@@ -2,15 +2,13 @@ import { useState } from "react"
 
 import CartItem from "./CartItem"
 // import EmptyCart from "./EmptyCart"
-import TallyFooter from "./TallyFooter"
+// import TallyFooter from "./TallyFooter"
 import UserHeader from "./UserHeader"
 import AddItem from "./AddItem"
 
 function ShoppingCart() {
     let itemQuantity;
     let itemPrice;
-    let itemTotalPrice;
-    let isDonation;
     const [item, setItem] = useState([
         {
             id: 0,
@@ -48,16 +46,6 @@ function ShoppingCart() {
     setItem(newItemList)
   }
 
-  const addItem = (itemName, itemPrice, itemQuantity) => {
-    const newItem = {
-        index: item.length,
-        itemName: itemName,
-        itemPrice: itemPrice,
-        itemQuantity: itemQuantity
-    }
-    const newItemMass = [...item, newItem]
-    setItem(newItemMass)
-  }
     return (
         <div className="col s12">
             <UserHeader />
@@ -65,7 +53,7 @@ function ShoppingCart() {
             <CartItem item={item} />
             <AddItem handleAddItem={onItemAdd} />
             <div className='row deadSpace' />
-            <TallyFooter />
+            {/* <TallyFooter /> */}
         </div>
     )
 }
