@@ -32,7 +32,7 @@ function AddItem({ handleAddItem }) {
     }
 
     const yesDonationApple = () => {
-        handleAddItem({name: 'Apple to be Donated', quantity: 1, price: 0.30, totalPrice: itemQuantity * itemPrice, isDonation: 1})
+        handleAddItem({name: 'Apple', quantity: 1, price: 0.55, totalPrice: itemQuantity * itemPrice, isDonation: 1})
     }
 
     const donationModal = () => {
