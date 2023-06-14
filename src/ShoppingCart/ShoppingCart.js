@@ -10,28 +10,28 @@ function ShoppingCart() {
     let itemQuantity;
     let itemPrice;
     const [item, setItem] = useState([
-        {
-            id: 0,
-            itemName: 'Carrot',
-            itemQuantity: 1,
-            itemPrice: 1.29,
-            itemTotalPrice: itemPrice * itemQuantity
-        },
-        {
-            id: 1,
-            itemName: 'Apple',
-            itemQuantity: 1,
-            itemPrice: 0.55,
-            itemTotalPrice: itemPrice * itemQuantity,
-            isDonation: 1
-        },
-        {
-            id: 2,
-            itemName: 'Steak',
-            itemQuantity: 2,
-            itemPrice: 2.25,
-            itemTotalPrice: itemPrice * itemQuantity
-        }
+        // {
+        //     id: 0,
+        //     itemName: 'Carrot',
+        //     itemQuantity: 1,
+        //     itemPrice: 1.29,
+        //     itemTotalPrice: itemPrice * itemQuantity
+        // },
+        // {
+        //     id: 1,
+        //     itemName: 'Apple',
+        //     itemQuantity: 1,
+        //     itemPrice: 0.55,
+        //     itemTotalPrice: itemPrice * itemQuantity,
+        //     isDonation: 1
+        // },
+        // {
+        //     id: 2,
+        //     itemName: 'Steak',
+        //     itemQuantity: 2,
+        //     itemPrice: 2.25,
+        //     itemTotalPrice: itemPrice * itemQuantity
+        // }
   ], {itemTotalPrice: itemPrice * itemQuantity}
   )
 
