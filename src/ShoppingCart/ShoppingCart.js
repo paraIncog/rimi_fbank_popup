@@ -42,7 +42,7 @@ function ShoppingCart() {
 //   }
 
   const onItemAdd = (e) => {
-    const newItemList = [...item, {productName:e.name, productPrice:e.price, productQuantity:e.quantity, index:item.length, isDonation:e.isDonation}]
+    const newItemList = [...item, {itemName:e.name, itemPrice:e.price, itemQuantity:e.quantity, index:item.length, isDonation:e.isDonation}]
     setItem(newItemList)
   }
 
