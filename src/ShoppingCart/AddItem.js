@@ -35,6 +35,7 @@ function AddItem({ handleAddItem }) {
     const donationModal = () => {
         console.log('Donation Ballot Initiated')
     }
+    
     return (
         <div className="goodPadding card-panel black-text page-footer">
             <div className="row center-align">

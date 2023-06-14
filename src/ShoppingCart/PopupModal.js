@@ -2,7 +2,7 @@ import M from "materialize-css";
 
 function initModal() {
     let elems = document.querySelectorAll('.modal');
-    let instances = M.Modal.init(elems, {});
+    M.Modal.init(elems, {});
 }
 
 function PopupModal({ yesDonation, noDonation }) {

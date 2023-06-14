@@ -7,32 +7,32 @@ import UserHeader from "./UserHeader"
 import AddItem from "./AddItem"
 
 function ShoppingCart() {
-    let itemQuantity;
-    let itemPrice;
+    let productQuantity;
+    let productPrice;
     const [item, setItem] = useState([
         // {
         //     id: 0,
-        //     itemName: 'Carrot',
-        //     itemQuantity: 1,
-        //     itemPrice: 1.29,
-        //     itemTotalPrice: itemPrice * itemQuantity
+        //     productName: 'Carrot',
+        //     productQuantity: 1,
+        //     productPrice: 1.29,
+        //     productTotalPrice: productPrice * productQuantity
         // },
         // {
         //     id: 1,
-        //     itemName: 'Apple',
-        //     itemQuantity: 1,
-        //     itemPrice: 0.55,
-        //     itemTotalPrice: itemPrice * itemQuantity,
+        //     productName: 'Apple',
+        //     productQuantity: 1,
+        //     productPrice: 0.55,
+        //     productTotalPrice: productPrice * productQuantity,
         //     isDonation: 1
         // },
         // {
         //     id: 2,
-        //     itemName: 'Steak',
-        //     itemQuantity: 2,
-        //     itemPrice: 2.25,
-        //     itemTotalPrice: itemPrice * itemQuantity
+        //     productName: 'Steak',
+        //     productQuantity: 2,
+        //     productPrice: 2.25,
+        //     productTotalPrice: productPrice * productQuantity
         // }
-  ], {itemTotalPrice: itemPrice * itemQuantity}
+  ], {productTotalPrice: productPrice * productQuantity}
   )
 
 //   function EmptyCartEnable() {
@@ -42,7 +42,7 @@ function ShoppingCart() {
 //   }
 
   const onItemAdd = (e) => {
-    const newItemList = [...item, {itemName:e.name, itemPrice:e.price, itemQuantity:e.quantity, index:item.length, isDonation:e.isDonation}]
+    const newItemList = [...item, {productName:e.name, productPrice:e.price, productQuantity:e.quantity, index:item.length, isDonation:e.isDonation}]
     setItem(newItemList)
   }
 
