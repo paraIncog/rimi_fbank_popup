@@ -36,7 +36,7 @@ function AddItem({ handleAddItem }) {
         console.log('Donation Ballot Initiated')
     }
     return (
-        <div className="goodPadding card-panel black-text">
+        <div className="goodPadding card-panel black-text page-footer">
             <div className="row center-align">
                 <div className="col s4">
                     <div onClick={addCarrots} className="">

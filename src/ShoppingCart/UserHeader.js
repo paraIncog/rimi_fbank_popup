@@ -1,4 +1,4 @@
-import globe from '../icons/globe-solid1.png'
+// import globe from '../icons/globe-solid1.png'
 
 function UserHeader() {
     return (
@@ -6,9 +6,9 @@ function UserHeader() {
             <h4 className="col s6 left-align">
                 Märt
             </h4>
-            <div className="col s6 right-align">
+            {/* <div className="col s6 right-align">
                 <img src={globe} alt="globe" className='globeItem' />
-            </div>
+            </div> */}
         </div>
     )
 }
