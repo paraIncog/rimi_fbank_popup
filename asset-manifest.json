@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/rimi_fbank_popup/static/css/main.2a127266.css",
-    "main.js": "/rimi_fbank_popup/static/js/main.2391a7e8.js",
+    "main.js": "/rimi_fbank_popup/static/js/main.88785eee.js",
     "static/js/787.5a7e7066.chunk.js": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js",
     "static/media/steak_image.jpg": "/rimi_fbank_popup/static/media/steak_image.6fb31406ac94f6e6b23d.jpg",
-    "static/media/apple_image.jpg": "/rimi_fbank_popup/static/media/apple_image.ad03bcb50f14476af9d6.jpg",
+    "static/media/apple_image.jpg": "/rimi_fbank_popup/static/media/apple_image.6c50a3ad5ff3bba02fae.jpg",
     "static/media/carrot_image.jpg": "/rimi_fbank_popup/static/media/carrot_image.a9086e270cd4e97a9e13.jpg",
-    "static/media/hand-holding-dollar-solid.png": "/rimi_fbank_popup/static/media/hand-holding-dollar-solid.ed6bfec4f11651277888.png",
+    "static/media/hand-holding-dollar-solid.png": "/rimi_fbank_popup/static/media/hand-holding-dollar-solid.a7ad93d5354f87ab9b28.png",
     "index.html": "/rimi_fbank_popup/index.html",
     "main.2a127266.css.map": "/rimi_fbank_popup/static/css/main.2a127266.css.map",
-    "main.2391a7e8.js.map": "/rimi_fbank_popup/static/js/main.2391a7e8.js.map",
+    "main.88785eee.js.map": "/rimi_fbank_popup/static/js/main.88785eee.js.map",
     "787.5a7e7066.chunk.js.map": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a127266.css",
-    "static/js/main.2391a7e8.js"
+    "static/js/main.88785eee.js"
   ]
 }
