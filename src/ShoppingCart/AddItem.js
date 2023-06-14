@@ -6,6 +6,27 @@ import appleImage from '../itemPictures/apple_image.jpg'
 import steakImage from '../itemPictures/steak_image.jpg'
 import PopupModal from "./PopupModal"
 
+const API_URL = 'https://api-production-e98e.up.railway.app/items/';
+// let products = [];
+
+// const productName = document.querySelector('#productName');
+// const productPrice = document.querySelector('#productPrice');
+// const productQuantity = document.querySelector('#productQuantity');
+// const isDonatable = document.querySelector('#isDonatable');
+
+async function getProducts() {
+    try {
+        // products = await fetch(`${API_URL}detail/1`).then((response => response.json()));
+        // for (let product of products) {
+        //     console.log(`${product.id}`, `${product.productName}`)
+        // }
+        // console.log(`${API_URL}detail/1`);
+        await fetch(`${API_URL}detail/a`).then((response => response.json()))
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 function initModal() {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems, {});
@@ -13,29 +34,57 @@ function initModal() {
 
 function AddItem({ handleAddItem }) {
     setTimeout(initModal, 200)
-    let [itemQuantity] = useState()
-    let [itemPrice] = useState()
+    let [productQuantity] = useState()
+    let [productPrice] = useState()
 
     const addCarrots = () => {
-        handleAddItem({name: 'Carrot', quantity: 1, price: 1.21, totalPrice: itemQuantity * itemPrice})
+        handleAddItem({ name: 'Carrot Kadarbik 500g', quantity: 1, price: 1.21, totalPrice: productQuantity * productPrice })
     }
 
     const addSteak = () => {
-        handleAddItem({name: 'Steak', quantity: 1, price: 2.29, totalPrice: itemQuantity * itemPrice})
+        handleAddItem({ name: 'Broiler breast fillet insert Rimi GL 500g', quantity: 1, price: 3.86, totalPrice: productQuantity * productPrice })
     }
 
     const noDonationApple = () => {
-        handleAddItem({name: 'Apple', quantity: 1, price: 0.55, totalPrice: itemQuantity * itemPrice})
+        handleAddItem({ name: 'Apple Royal Gala sweet, 1kilo 4pc', quantity: 1, price: 0.55, totalPrice: productQuantity * productPrice })
     }
 
     const yesDonationApple = () => {
-        handleAddItem({name: 'Apple', quantity: 1, price: 0.55, totalPrice: itemQuantity * itemPrice, isDonation: 1})
+        handleAddItem({ name: 'Apple Royal Gala sweet, 1kilo 4pc', quantity: 1, price: 0.55, totalPrice: productQuantity * productPrice, isDonatable: 1 })
     }
+
+    // const addPaprika = () => {
+    //     handleAddItem({ name: 'Paprika mix Rimi 1kl, 350g', quantity: 1, price: 3.86, totalPrice: productQuantity * productPrice })
+    // }
+
+    // const addCBeef = () => {
+    //     handleAddItem({ name: 'Canned beef "De lux"', quantity: 1, price: 4.3, totalPrice: productQuantity * productPrice })
+    // }
+
+    // const addCJelly = () => {
+    //     handleAddItem({ name: 'Chicken in jelly "Villa vita"', quantity: 1, price: 1.8, totalPrice: productQuantity * productPrice })
+    // }
+
+    // const addPate = () => {
+    //     handleAddItem({ name: 'Duck Pate 160g', quantity: 1, price: 4.79, totalPrice: productQuantity * productPrice })
+    // }
+
+    // const addMChoco = () => {
+    //     handleAddItem({ name: 'Milk chocolate PERGALE with nuts', quantity: 1, price: 5.51, totalPrice: productQuantity * productPrice })
+    // }
+
+    // const addApricots = () => {
+    //     handleAddItem({ name: 'DriedApricots', quantity: 1, price: 6.49, totalPrice: productQuantity * productPrice })
+    // }
+
+    // const addGBalls = () => {
+    //     handleAddItem({ name: 'Gingerballs', quantity: 1, price: 3.79, totalPrice: productQuantity * productPrice })
+    // }
 
     const donationModal = () => {
         console.log('Donation Ballot Initiated')
     }
-    
+
     return (
         <div className="goodPadding card-panel black-text page-footer">
             <div className="row center-align">
@@ -51,7 +100,7 @@ function AddItem({ handleAddItem }) {
                     <div onClick={donationModal} data-target="modalDonation" className="modal-trigger">
                         <img src={appleImage} alt='Apple' className="itemImage row" />
                         <div className="row">
-                            Add 1 Apple
+                            Add 1 Apple pack
                         </div>
                     </div>
                 </div>
@@ -59,10 +108,11 @@ function AddItem({ handleAddItem }) {
                     <div onClick={addSteak} className="">
                         <img src={steakImage} alt='Steak' className="itemImage row" />
                         <div className="row">
-                            Add 1 Steak
+                            Add 1 Fillet
                         </div>
                     </div>
                 </div>
+                {/* <button className="btn" onClick={getProducts}>Call Backend</button> */}
             </div>
             <PopupModal yesDonation={yesDonationApple} noDonation={noDonationApple} />
         </div>

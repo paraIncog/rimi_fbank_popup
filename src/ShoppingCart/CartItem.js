@@ -1,17 +1,17 @@
-function CartItem({ item }) {
+function CartItem({ product }) {
     return (
-        item.map((item, index) => {
-            const itemTotalPrice = item.itemQuantity * item.itemPrice
-            const totalPriceDonation = item.itemPrice * 2
-            if (item.isDonation === 1) {
+        product.map((product, index) => {
+            const productTotalPrice = product.productQuantity * product.productPrice
+            const totalPriceDonation = product.productPrice * 2
+            if (product.isDonatable === 1) {
                 return (
                     <>
                         <div
                             className='goodPadding cartItemDonation'
-                            key={item.id}
+                            key={product.id}
                         >
                             <div className='row col s12'>
-                                <div className='col s6 goodVisText'>{item.itemName}</div>
+                                <div className='col s6 goodVisText'>{product.productName}</div>
                                 <div className='col s6 right-align goodVisText'>{totalPriceDonation} €</div>
                             </div>
                             <div className='row goodVisText'>
@@ -19,7 +19,7 @@ function CartItem({ item }) {
                                     Donation item to Foodbank
                                 </div>
                                 <div className="col s6 right-align">
-                                    {item.itemPrice} €
+                                    {product.productPrice} €
                                 </div>
                             </div>
                         </div>
@@ -31,14 +31,14 @@ function CartItem({ item }) {
             return (
                 <div
                     className='goodPadding'
-                    key={item.id}
+                    key={product.id}
                 >
                     <div className='row col s12'>
-                        <div className='col s6 goodVisText'>{item.itemName}</div>
-                        <div className='col s6 right-align goodVisText'>{itemTotalPrice} €</div>
+                        <div className='col s6 goodVisText'>{product.productName}</div>
+                        <div className='col s6 right-align goodVisText'>{productTotalPrice} €</div>
                     </div>
                     <div className='row goodVisText'>
-                        {item.itemQuantity} X {item.itemPrice} €
+                        {product.productQuantity} X {product.productPrice} €
                     </div>
                     <div className="divider" />
                 </div>

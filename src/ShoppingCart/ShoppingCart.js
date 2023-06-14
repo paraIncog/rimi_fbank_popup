@@ -9,48 +9,90 @@ import AddItem from "./AddItem"
 function ShoppingCart() {
     let productQuantity;
     let productPrice;
-    const [item, setItem] = useState([
-        // {
-        //     id: 0,
-        //     productName: 'Carrot',
-        //     productQuantity: 1,
-        //     productPrice: 1.29,
-        //     productTotalPrice: productPrice * productQuantity
-        // },
-        // {
-        //     id: 1,
-        //     productName: 'Apple',
-        //     productQuantity: 1,
-        //     productPrice: 0.55,
-        //     productTotalPrice: productPrice * productQuantity,
-        //     isDonation: 1
-        // },
-        // {
-        //     id: 2,
-        //     productName: 'Steak',
-        //     productQuantity: 2,
-        //     productPrice: 2.25,
-        //     productTotalPrice: productPrice * productQuantity
-        // }
+    const [product, setProduct] = useState([
+        {
+            id: 1,
+            productName: 'Carrot Kadarbik 500g',
+            productPrice: 1.21,
+            productQuantity: 1,
+            isDonatable: false
+        },
+        {
+            id: 2,
+            productName: 'Apple Royal Gala sweet, 1kilo 4pc',
+            productPrice: 0.55,
+            productQuantity: 1,
+            isDonatable: 1
+        },
+        {
+            id: 3,
+            productName: 'Broiler breast fillet insert Rimi GL 500g',
+            productPrice: 3.86,
+            productQuantity: 2,
+            isDonatable: 0
+        },
+        {
+            id: 4,
+            productName: 'Paprika mix Rimi 1kl, 350g',
+            productPrice: 3.86,
+            productQuantity: 1,
+            isDonatable: false
+        },
+        {
+            id: 5,
+            productName: 'Duck Pate 160g',
+            productPrice: 4.79,
+            productQuantity: 5,
+            isDonatable: 0
+        },
+        {
+            id: 6,
+            productName: 'Canned beef "De lux"',
+            productPrice: 4.3,
+            productQuantity: 1,
+            isDonatable: false
+        },
+        {
+            id: 7,
+            productName: 'Chicken in jelly "Villa vita"',
+            productPrice: 1.8,
+            productQuantity: 1,
+            isDonatable: false
+        },
+        {
+            id: 8,
+            productName: 'Milk chocolate PERGALE with nuts',
+            productPrice: 5.51,
+            productQuantity: 2,
+            isDonatable: false
+        },
+        {
+            id: 9,
+            productName: 'Dried Apricots',
+            productPrice: 6.49,
+            productQuantity: 1,
+            isDonatable: 0
+        },
+        {
+            id: 10,
+            productName: 'Gingerballs',
+            productPrice: 3.79,
+            productQuantity: 2,
+            isDonatable: false
+        }
   ], {productTotalPrice: productPrice * productQuantity}
   )
 
-//   function EmptyCartEnable() {
-//     if (item.length < 1) {
-//         <EmptyCart />
-//     }
-//   }
-
   const onItemAdd = (e) => {
-    const newItemList = [...item, {itemName:e.name, itemPrice:e.price, itemQuantity:e.quantity, index:item.length, isDonation:e.isDonation}]
-    setItem(newItemList)
+    const newItemList = [...product, {productName:e.name, productPrice:e.price, productQuantity:e.quantity, index:product.length, isDonatable:e.isDonatable}]
+    setProduct(newItemList)
   }
 
     return (
         <div className="col s12">
             <UserHeader />
             {/* <EmptyCartEnable /> */}
-            <CartItem item={item} />
+            <CartItem product={product} />
             <AddItem handleAddItem={onItemAdd} />
             <div className='row deadSpace' />
             {/* <TallyFooter /> */}
