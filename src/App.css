@@ -48,7 +48,7 @@ main {
 
 .page-footer {
     position: fixed;
-    bottom: 0;
+    bottom: -0.9rem;
     width: 100%;
     border-top: 0.2rem grey solid;
     left: 0;
@@ -75,4 +75,9 @@ main {
 
 button.donation-confirm {
     margin-right: 1rem;
-} 
+}
+
+.footerMainObject {
+    width: 4rem;
+    height: 4rem;
+}

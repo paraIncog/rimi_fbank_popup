@@ -1,11 +1,17 @@
 import { useState } from "react"
 import M from "materialize-css"
 
+import PopupModal from "./PopupModal"
+
 import carrotImage from '../itemPictures/carrot_image.jpg'
 import appleImage from '../itemPictures/apple_image.jpg'
 import steakImage from '../itemPictures/steak_image.jpg'
 import paprikaImage from '../itemPictures/paprika_image.jpg'
-import PopupModal from "./PopupModal"
+import apricotImage from '../itemPictures/apricot_image.jpg'
+import cbeefImage from '../itemPictures/cannedbeef_image.jpg'
+import chocoImage from '../itemPictures/choco_image.jpg'
+import gingerImage from '../itemPictures/ginger_image.jpg'
+import pateImage from '../itemPictures/pate_image.jpg'
 
  const API_URL = 'https:api-production-e98e.up.railway.app/items/';
  let products = [];
@@ -59,7 +65,7 @@ function AddItem({ handleAddItem }) {
     }
 
     const addCBeef = () => {
-        handleAddItem({ name: 'Canned beef "De lux"', quantity: 1, price: 4.3, totalPrice: productQuantity * productPrice })
+        handleAddItem({ name: 'Canned beef 240g', quantity: 1, price: 4.49, totalPrice: productQuantity * productPrice })
     }
 
     const addCJelly = () => {
@@ -71,15 +77,15 @@ function AddItem({ handleAddItem }) {
     }
 
     const addMChoco = () => {
-        handleAddItem({ name: 'Milk chocolate PERGALE with nuts', quantity: 1, price: 5.51, totalPrice: productQuantity * productPrice })
+        handleAddItem({ name: 'Milk chocolate with wild berry filling Pergale 100g', quantity: 1, price: 1.59, totalPrice: productQuantity * productPrice })
     }
 
     const addApricots = () => {
-        handleAddItem({ name: 'DriedApricots', quantity: 1, price: 6.49, totalPrice: productQuantity * productPrice })
+        handleAddItem({ name: 'Dried apricot stoneless Awake 400g', quantity: 1, price: 4.39, totalPrice: productQuantity * productPrice })
     }
 
      const addGBalls = () => {
-         handleAddItem({ name: 'Gingerballs', quantity: 1, price: 3.79, totalPrice: productQuantity * productPrice })
+         handleAddItem({ name: 'Xinxian Ginger balls 240 g', quantity: 1, price: 3.25, totalPrice: productQuantity * productPrice })
      }
 
     const donationModal = () => {
@@ -128,17 +134,17 @@ function AddItem({ handleAddItem }) {
                  </div>
                  <div className="col s4">
                      <div onClick={addCBeef}>
-                         <img alt='Beef' className="itemImage row" />
+                         <img src={cbeefImage} alt='Beef' className="itemImage row" />
                          <div className="row">
                              Add 1 Canned Beef
                          </div>
                      </div>
                  </div>
                  <div className="col s4">
-                     <div onClick={addCJelly} className="">
-                         <img alt='Chicken' className="itemImage row" />
+                     <div onClick={addGBalls} className="">
+                         <img src={gingerImage} alt='Gingerball' className="itemImage row" />
                          <div className="row">
-                             Add 1 Chicken
+                             Add 1 Gingerball cup
                          </div>
                      </div>
                  </div>
@@ -146,7 +152,7 @@ function AddItem({ handleAddItem }) {
              <div className="row center-align">
                  <div className="col s4">
                      <div onClick={addPate} className="">
-                         <img alt='Duck Pate' className="itemImage row" />
+                         <img src={pateImage} alt='Duck Pate' className="itemImage row" />
                          <div className="row">
                              Add 1 Duck Pate
                          </div>
@@ -154,15 +160,15 @@ function AddItem({ handleAddItem }) {
                  </div>
                  <div className="col s4">
                      <div onClick={addMChoco}>
-                         <img alt='Chocolate' className="itemImage row" />
+                         <img src={chocoImage} alt='Chocolate' className="itemImage row" />
                          <div className="row">
-                             Add 1 Milk Choco
+                             Add 1 Milk Chocolate
                          </div>
                      </div>
                  </div>
                  <div className="col s4">
                      <div onClick={addApricots} className="">
-                         <img alt='Apricot' className="itemImage row" />
+                         <img src={apricotImage} alt='Apricot' className="itemImage row" />
                          <div className="row">
                              Add 1 Apricot pack
                          </div>

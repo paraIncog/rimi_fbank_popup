@@ -47,7 +47,7 @@ function ShoppingCart() {
         // },
         // {
         //     id: 6,
-        //     productName: 'Canned beef "De lux"',
+        //     productName: 'Canned beef 240g',
         //     productPrice: 4.3,
         //     productQuantity: 1,
         //     isDonatable: false
@@ -90,11 +90,13 @@ function ShoppingCart() {
 
     return (
         <div className="col s12">
+            <div className="container">
             <UserHeader />
             {/* <EmptyCartEnable /> */}
             <AddItem handleAddItem={onItemAdd} />
             <CartItem product={product} />
             {/* <div className='row deadSpace' /> */}
+            </div>
             <TallyFooter />
         </div>
     )

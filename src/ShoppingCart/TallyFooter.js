@@ -1,13 +1,19 @@
-let tallyTotalProducts
-let tallyTotalPrice
+// let tallyTotalProducts
+// let tallyTotalPrice
+
+import ShopCartSel from "../icons/basket-shopping-solid_selected.png";
 
 function TallyFooter() {
     return (
         <>
             <div className="row">
-                <div className="col s12 m12">
-                    <div className="card white black-text center-align">
-                        cd
+                <div className="">
+                    <div className="card white black-text center-align page-footer">
+                        <div>
+                            <img className="footerMainObject" src={ShopCartSel} alt='Footer main' />
+                            <br />
+                            Shopping Cart
+                        </div>
                     </div>
                 </div>
             </div>
