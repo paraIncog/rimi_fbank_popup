@@ -1,25 +1,19 @@
 {
   "files": {
     "main.css": "/rimi_fbank_popup/static/css/main.fb2d0e6a.css",
-    "main.js": "/rimi_fbank_popup/static/js/main.d629d536.js",
+    "main.js": "/rimi_fbank_popup/static/js/main.efa0b862.js",
     "static/js/787.5a7e7066.chunk.js": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js",
-    "static/media/ginger_image.jpg": "/rimi_fbank_popup/static/media/ginger_image.cd1ec753bd181420c917.jpg",
-    "static/media/apricot_image.jpg": "/rimi_fbank_popup/static/media/apricot_image.4b712043ff64a2120d36.jpg",
-    "static/media/apple_image.jpg": "/rimi_fbank_popup/static/media/apple_image.6c50a3ad5ff3bba02fae.jpg",
-    "static/media/carrot_image.jpg": "/rimi_fbank_popup/static/media/carrot_image.6c54fcc170df1431a088.jpg",
-    "static/media/pate_image.jpg": "/rimi_fbank_popup/static/media/pate_image.0a22294b7cd31b5c257a.jpg",
-    "static/media/cannedbeef_image.jpg": "/rimi_fbank_popup/static/media/cannedbeef_image.4e8827e89d73ce8425d3.jpg",
-    "static/media/choco_image.jpg": "/rimi_fbank_popup/static/media/choco_image.fbc2f165c6e8f0270a2b.jpg",
-    "static/media/steak_image.jpg": "/rimi_fbank_popup/static/media/steak_image.e3ea4c159d075c257f51.jpg",
-    "static/media/paprika_image.jpg": "/rimi_fbank_popup/static/media/paprika_image.89bef29e5eb1723ebb48.jpg",
+    "static/media/apple_donatable_image.jpg": "/rimi_fbank_popup/static/media/apple_donatable_image.34d6f5893e4ed151d1b2.jpg",
+    "static/media/yoghurt_image.jpg": "/rimi_fbank_popup/static/media/yoghurt_image.ff87de5a317635cc0cba.jpg",
+    "static/media/oatmeal_image.jpg": "/rimi_fbank_popup/static/media/oatmeal_image.8fbfa983417882242df5.jpg",
     "static/media/basket-shopping-solid_selected.png": "/rimi_fbank_popup/static/media/basket-shopping-solid_selected.2d2f86f28054d4695885.png",
     "index.html": "/rimi_fbank_popup/index.html",
     "main.fb2d0e6a.css.map": "/rimi_fbank_popup/static/css/main.fb2d0e6a.css.map",
-    "main.d629d536.js.map": "/rimi_fbank_popup/static/js/main.d629d536.js.map",
+    "main.efa0b862.js.map": "/rimi_fbank_popup/static/js/main.efa0b862.js.map",
     "787.5a7e7066.chunk.js.map": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb2d0e6a.css",
-    "static/js/main.d629d536.js"
+    "static/js/main.efa0b862.js"
   ]
 }
