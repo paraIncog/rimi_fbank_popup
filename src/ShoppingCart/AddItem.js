@@ -13,27 +13,6 @@ import chocoImage from '../itemPictures/choco_image.jpg'
 import gingerImage from '../itemPictures/ginger_image.jpg'
 import pateImage from '../itemPictures/pate_image.jpg'
 
- const API_URL = 'https:api-production-e98e.up.railway.app/items/';
- let products = [];
-
- const productName = document.querySelector('#productName');
- const productPrice = document.querySelector('#productPrice');
- const productQuantity = document.querySelector('#productQuantity');
- const isDonatable = document.querySelector('#isDonatable');
-
- async function getProducts() {
-     try {
-          products = await fetch(`${API_URL}detail/1`).then((response => response.json()));
-          for (let product of products) {
-              console.log(`${product.id}`, `${product.productName}`)
-          }
-          console.log(`${API_URL}detail/1`);
-         await fetch(`${API_URL}detail/a`).then((response => response.json()))
-     } catch (e) {
-         console.log(e);
-     }
- }
-
 function initModal() {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems, {});
@@ -68,10 +47,6 @@ function AddItem({ handleAddItem }) {
         handleAddItem({ name: 'Canned beef 240g', quantity: 1, price: 4.49, totalPrice: productQuantity * productPrice })
     }
 
-    const addCJelly = () => {
-        handleAddItem({ name: 'Chicken in jelly "Villa vita"', quantity: 1, price: 1.8, totalPrice: productQuantity * productPrice })
-    }
-
     const addPate = () => {
         handleAddItem({ name: 'Duck Pate 160g', quantity: 1, price: 4.79, totalPrice: productQuantity * productPrice })
     }
@@ -84,9 +59,9 @@ function AddItem({ handleAddItem }) {
         handleAddItem({ name: 'Dried apricot stoneless Awake 400g', quantity: 1, price: 4.39, totalPrice: productQuantity * productPrice })
     }
 
-     const addGBalls = () => {
-         handleAddItem({ name: 'Xinxian Ginger balls 240 g', quantity: 1, price: 3.25, totalPrice: productQuantity * productPrice })
-     }
+    const addGBalls = () => {
+        handleAddItem({ name: 'Xinxian Ginger balls 240 g', quantity: 1, price: 3.25, totalPrice: productQuantity * productPrice })
+    }
 
     const donationModal = () => {
         console.log('Donation Ballot Initiated')
@@ -94,92 +69,92 @@ function AddItem({ handleAddItem }) {
 
     return (
         <div>
-        <div className='row'>
-            <div className='col s12 m12'>
-                <div className='card white black-text center-align'>
-                <div className="row center-align">
-                 <div className="col s4">
-                     <div onClick={addCarrots} className="">
-                         <img src={carrotImage} alt='Carrot' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Carrot
-                         </div>
-                     </div>
-                 </div>
-                 <div className="col s4">
-                     <div onClick={donationModal} data-target="modalDonation" className="modal-trigger">
-                         <img src={appleImage} alt='Apple' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Apple pack
-                         </div>
-                     </div>
-                 </div>
-                 <div className="col s4">
-                     <div onClick={addSteak} className="">
-                         <img src={steakImage} alt='Steak' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Fillet
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div className="row center-align">
-                 <div className="col s4">
-                     <div onClick={addPaprika} className="">
-                         <img src={paprikaImage} alt='Paprika' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Paprika pack
-                         </div>
-                     </div>
-                 </div>
-                 <div className="col s4">
-                     <div onClick={addCBeef}>
-                         <img src={cbeefImage} alt='Beef' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Canned Beef
-                         </div>
-                     </div>
-                 </div>
-                 <div className="col s4">
-                     <div onClick={addGBalls} className="">
-                         <img src={gingerImage} alt='Gingerball' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Gingerball cup
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div className="row center-align">
-                 <div className="col s4">
-                     <div onClick={addPate} className="">
-                         <img src={pateImage} alt='Duck Pate' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Duck Pate
-                         </div>
-                     </div>
-                 </div>
-                 <div className="col s4">
-                     <div onClick={addMChoco}>
-                         <img src={chocoImage} alt='Chocolate' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Milk Chocolate
-                         </div>
-                     </div>
-                 </div>
-                 <div className="col s4">
-                     <div onClick={addApricots} className="">
-                         <img src={apricotImage} alt='Apricot' className="itemImage row" />
-                         <div className="row">
-                             Add 1 Apricot pack
-                         </div>
-                     </div>
-                 </div>
-             </div>
+            <div className='row'>
+                <div className='col s12 m12'>
+                    <div className='card white black-text center-align'>
+                        <div className="row center-align">
+                            <div className="col s4">
+                                <div onClick={addCarrots} className="">
+                                    <img src={carrotImage} alt='Carrot' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Carrot
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col s4">
+                                <div onClick={donationModal} data-target="modalDonation" className="modal-trigger">
+                                    <img src={appleImage} alt='Apple' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Apple pack
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col s4">
+                                <div onClick={addSteak} className="">
+                                    <img src={steakImage} alt='Steak' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Fillet
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row center-align">
+                            <div className="col s4">
+                                <div onClick={addPaprika} className="">
+                                    <img src={paprikaImage} alt='Paprika' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Paprika pack
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col s4">
+                                <div onClick={addCBeef}>
+                                    <img src={cbeefImage} alt='Beef' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Canned Beef
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col s4">
+                                <div onClick={addGBalls} className="">
+                                    <img src={gingerImage} alt='Gingerball' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Gingerball cup
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row center-align">
+                            <div className="col s4">
+                                <div onClick={addPate} className="">
+                                    <img src={pateImage} alt='Duck Pate' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Duck Pate
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col s4">
+                                <div onClick={addMChoco}>
+                                    <img src={chocoImage} alt='Chocolate' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Milk Chocolate
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col s4">
+                                <div onClick={addApricots} className="">
+                                    <img src={apricotImage} alt='Apricot' className="itemImage row" />
+                                    <div className="row">
+                                        Add 1 Apricot pack
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <PopupModal yesDonation={yesDonationApple} noDonation={noDonationApple} />
         </div>
-             <PopupModal yesDonation={yesDonationApple} noDonation={noDonationApple} />
-     </div>
     )
 }
 
