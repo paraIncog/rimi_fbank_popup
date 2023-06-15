@@ -10,14 +10,37 @@ function UserHeader() {
     }
 
     return (
-        <div className="col s12 row Header stickyHeader goodVisText goodPadding">
-            <h4 className="col s6 left-align">
-                Märt
-            </h4>
-            <div className="col s6 right-align modal-trigger" onClick={welcomeDonationModal} data-target="modalWelcomeDonation">
-                <img src={donation} alt="globe" className='globeItem' />
+        // <div className="col s12 row Header stickyHeader goodVisText goodPadding">
+        //     <h4 className="col s6 left-align">
+        //         Märt
+        //     </h4>
+        //     <div className="col s6 right-align modal-trigger" onClick={welcomeDonationModal} data-target="modalWelcomeDonation">
+        //         <img src={donation} alt="globe" className='globeItem' />
+        //     </div>
+        //     <WelcomingPopupModal />
+        // </div>
+        <div className='row'>
+            <div className='col s12 m12'>
+                <div className='card white black-text center-align'>
+                    <div className='row'>
+                        <h6>
+                            Märt
+                        </h6>
+                    </div>
+                    <div className='row'>
+                        <div className='row'>
+                            <h4 className='red-text'>
+                                0,00
+                            </h4>
+                        </div>
+                        <div className='row'>
+                            <h6 className='bold'>
+                                Your Cart
+                            </h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <WelcomingPopupModal />
         </div>
     )
 }

@@ -3,7 +3,7 @@ import ShoppingCart from './ShoppingCart/ShoppingCart'
 
 function App() {
   return (
-    <div>
+    <div className='container'>
       <ShoppingCart />
     </div>
   );

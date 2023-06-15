@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import CartItem from "./CartItem"
 // import EmptyCart from "./EmptyCart"
-// import TallyFooter from "./TallyFooter"
+import TallyFooter from "./TallyFooter"
 import UserHeader from "./UserHeader"
 import AddItem from "./AddItem"
 
@@ -95,7 +95,7 @@ function ShoppingCart() {
             <AddItem handleAddItem={onItemAdd} />
             <CartItem product={product} />
             {/* <div className='row deadSpace' /> */}
-            {/* <TallyFooter /> */}
+            <TallyFooter />
         </div>
     )
 }
