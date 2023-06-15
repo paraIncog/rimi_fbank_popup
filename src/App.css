@@ -19,8 +19,11 @@ body {
 }
 
 .Header {
-    background-color: rgb(207, 2, 2);
-    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-top: 0.2rem grey solid;
+    left: 0;
 }
 
 .stickyHeader {
@@ -77,11 +80,11 @@ main {
     height: 4.5rem;
 }
 
-button.donation-confirm {
-    margin-right: 1rem;
-}
-
 .footerMainObject {
     width: 4rem;
     height: 4rem;
+}
+
+.choiceButton {
+    width: 50%;
 }

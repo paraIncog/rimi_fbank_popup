@@ -1,13 +1,13 @@
 // import globe from '../icons/globe-solid1.png'
-import donation from '../icons/hand-holding-dollar-solid.png';
+// import donation from '../icons/hand-holding-dollar-solid.png';
 
-import WelcomingPopupModal from './WelcomingPopupModal'
+// import WelcomingPopupModal from './WelcomingPopupModal'
 
 function UserHeader() {
     
-    const welcomeDonationModal = () => {
-        console.log('Welcome Donation Ballot Initiated')
-    }
+    // const welcomeDonationModal = () => {
+    //     console.log('Welcome Donation Ballot Initiated')
+    // }
 
     return (
         // <div className="col s12 row Header stickyHeader goodVisText goodPadding">

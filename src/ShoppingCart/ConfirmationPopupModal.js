@@ -5,14 +5,14 @@ function initModal() {
     M.Modal.init(elems, {});
 }
 
-function ConfirmationPopupModal({ yesDonation1 }) {
+function ConfirmationPopupModal({ yesDonation1, yesDonation }) {
     setTimeout(initModal, 200)
     return (
-        <div id="modalDonation" className="modal">
+        <div id="modalDonationConfirmation" className="modal goodPadding">
             <div className="modal-content">
-                {/* That will be blue */}
+                {/* That will be blue button */}
                 <h6 className="center-align">Dont' pick it up. RIMI will send it to Foodbank</h6>
-                <button onClick={yesDonation1} className="green btn col s6 modal-close donation-confirm">Confirm</button>
+                <button onClick={yesDonation} className="blue btn modal-close choiceButton">Confirm</button>
             </div>
         </div>
     )
