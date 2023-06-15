@@ -6,7 +6,7 @@ function initModal() {
 }
 
 function ConfirmationPopupModal({ yesDonation1, yesDonation }) {
-    setTimeout(initModal, 200)
+    initModal()
     return (
         <div id="modalDonationConfirmation" className="modal goodPadding">
             <div className="modal-content">

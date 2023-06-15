@@ -1,9 +1,11 @@
 import M from "materialize-css";
-import ConfirmationPopupModal from "./ConfirmationPopupModal";
 
 function initModal() {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems, {});
+}
+const goodToast = () => {
+    M.toast({html: 'Thank you. No need to take additional product to checkout.'})
 }
 
 function PopupModal({ yesDonation, noDonation }) {
@@ -14,10 +16,13 @@ function PopupModal({ yesDonation, noDonation }) {
                 <div className="modal-content">
                     <h6 className="center-align">Would You like to donate Apple Royal Gala sweet, 1kilo 4pc (0.55 €) to Foodbank?</h6>
                 </div>
-                    <button onClick={yesDonation} data-target="modalDonationConfirmation" className="green btn modal-close choiceButton">Yes</button>
+                    <button onClick={yesDonation} className="green btn modal-close choiceButton">
+                        <div onClick={goodToast}>
+                            Yes
+                        </div>
+                    </button>
                     <button onClick={noDonation} href="#!" className="red btn modal-close choiceButton">Not Now</button>
             </div>
-            <ConfirmationPopupModal yesDonation={yesDonation} />
         </>
     )
 }

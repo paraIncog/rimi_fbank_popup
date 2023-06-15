@@ -93,8 +93,8 @@ function ShoppingCart() {
             <div className="container">
             <UserHeader />
             {/* <EmptyCartEnable /> */}
-            <AddItem handleAddItem={onItemAdd} />
             <CartItem product={product} />
+            <AddItem handleAddItem={onItemAdd} />
             <div className='row deadSpace' />
             </div>
             <TallyFooter />

@@ -35,7 +35,7 @@ function UserHeader() {
                         </div> */}
                         <div className='row'>
                             <h5 className='bold'>
-                                Welcome, Märt
+                                Welcome
                             </h5>
                         </div>
                     </div>
