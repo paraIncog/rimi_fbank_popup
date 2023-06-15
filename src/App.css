@@ -6,6 +6,10 @@ body {
     background-color: aliceblue;
 }
 
+.card {
+    border-radius: 0.5rem;
+}
+
 .goodPadding {
     padding: 1rem;
 }
@@ -70,7 +74,7 @@ main {
 }
 
 .deadSpace {
-    height: 14rem;
+    height: 4rem;
 }
 
 button.donation-confirm {

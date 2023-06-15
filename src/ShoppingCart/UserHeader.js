@@ -23,20 +23,20 @@ function UserHeader() {
             <div className='col s12 m12'>
                 <div className='card white black-text center-align'>
                     <div className='row'>
-                        <h6>
+                        {/* <h6>
                             Märt
-                        </h6>
+                        </h6> */}
                     </div>
                     <div className='row'>
-                        <div className='row'>
+                        {/* <div className='row'>
                             <h4 className='red-text'>
                                 0,00
                             </h4>
-                        </div>
+                        </div> */}
                         <div className='row'>
-                            <h6 className='bold'>
-                                Your Cart
-                            </h6>
+                            <h5 className='bold'>
+                                Welcome, Märt
+                            </h5>
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ function CartItem({ product }) {
                 return (
                     <>
                         <div
-                            className='goodPadding cartItemDonation'
+                            className='card goodPadding cartItemDonation'
                             key={product.id}
                         >
                             <div className='row col s12'>
@@ -23,14 +23,13 @@ function CartItem({ product }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="divider" />
                     </>
                 )
             }
 
             return (
                 <div
-                    className='goodPadding'
+                    className='card goodPadding'
                     key={product.id}
                 >
                     <div className='row col s12'>
@@ -40,7 +39,6 @@ function CartItem({ product }) {
                     <div className='row goodVisText'>
                         {product.productQuantity} X {product.productPrice} €
                     </div>
-                    <div className="divider" />
                 </div>
             )
         })

@@ -95,7 +95,7 @@ function ShoppingCart() {
             {/* <EmptyCartEnable /> */}
             <AddItem handleAddItem={onItemAdd} />
             <CartItem product={product} />
-            {/* <div className='row deadSpace' /> */}
+            <div className='row deadSpace' />
             </div>
             <TallyFooter />
         </div>
