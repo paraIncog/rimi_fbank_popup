@@ -5,7 +5,7 @@ function initModal() {
     M.Modal.init(elems, {});
 }
 const goodToast = () => {
-    M.toast({html: 'Thank you. No need to take additional product to checkout.'})
+    M.toast({html: 'Thank You. Selected product will be hand-picked by Rimi.'})
 }
 
 function PopupModal({ yesDonation, noDonation }) {
