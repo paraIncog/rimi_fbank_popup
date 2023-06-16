@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/rimi_fbank_popup/static/css/main.06479fcf.css",
-    "main.js": "/rimi_fbank_popup/static/js/main.06873ae1.js",
+    "main.js": "/rimi_fbank_popup/static/js/main.e1713755.js",
     "static/js/787.5a7e7066.chunk.js": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js",
-    "static/media/apple_donatable_image.jpg": "/rimi_fbank_popup/static/media/apple_donatable_image.34d6f5893e4ed151d1b2.jpg",
+    "static/media/apple_donatable_image.jpg": "/rimi_fbank_popup/static/media/apple_donatable_image.af46a47741ddeca0458e.jpg",
+    "static/media/juice_image.jpg": "/rimi_fbank_popup/static/media/juice_image.c506c111739e2eae3075.jpg",
     "static/media/yoghurt_image.jpg": "/rimi_fbank_popup/static/media/yoghurt_image.ff87de5a317635cc0cba.jpg",
-    "static/media/oatmeal_image.jpg": "/rimi_fbank_popup/static/media/oatmeal_image.8fbfa983417882242df5.jpg",
     "static/media/basket-shopping-solid_selected.png": "/rimi_fbank_popup/static/media/basket-shopping-solid_selected.2d2f86f28054d4695885.png",
     "index.html": "/rimi_fbank_popup/index.html",
     "main.06479fcf.css.map": "/rimi_fbank_popup/static/css/main.06479fcf.css.map",
-    "main.06873ae1.js.map": "/rimi_fbank_popup/static/js/main.06873ae1.js.map",
+    "main.e1713755.js.map": "/rimi_fbank_popup/static/js/main.e1713755.js.map",
     "787.5a7e7066.chunk.js.map": "/rimi_fbank_popup/static/js/787.5a7e7066.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06479fcf.css",
-    "static/js/main.06873ae1.js"
+    "static/js/main.e1713755.js"
   ]
 }
