@@ -5,7 +5,7 @@ import PopupModal from "./PopupModal"
 
 import yoghurtImage from '../itemPictures/yoghurt_image.jpg'
 import appleImage from '../itemPictures/apple_donatable_image.jpg'
-import oatmealImage from '../itemPictures/oatmeal_image.jpg'
+import juiceImage from '../itemPictures/juice_image.jpg'
 
 function initModal() {
     let elems = document.querySelectorAll('.modal');
@@ -21,8 +21,8 @@ function AddItem({ handleAddItem }) {
         handleAddItem({ name: 'Yogurt with wild strawberry Alma 1kg', quantity: 1, price: 1.99, totalPrice: productQuantity * productPrice })
     }
 
-    const addOatmeal = () => {
-        handleAddItem({ name: 'Oatmeal Tartu Mill 500g', quantity: 1, price: 0.89, totalPrice: productQuantity * productPrice })
+    const addJuice = () => {
+        handleAddItem({ name: 'Tropical fruit juice 100%, DON SIMON, 1 L', quantity: 1, price: 3.29, totalPrice: productQuantity * productPrice })
     }
 
     const noDonationApple = () => {
@@ -60,10 +60,10 @@ function AddItem({ handleAddItem }) {
                                 </div>
                             </div>
                             <div className="col s4">
-                                <div onClick={addOatmeal} className="">
-                                    <img src={oatmealImage} alt='Oatmeal' className="itemImage row" />
+                                <div onClick={addJuice} className="">
+                                    <img src={juiceImage} alt='Juice' className="itemImage row" />
                                     <div className="row">
-                                        Add 1 Oatmeal
+                                        Add 1 Juice
                                     </div>
                                 </div>
                             </div>
