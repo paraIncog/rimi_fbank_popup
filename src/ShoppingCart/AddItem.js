@@ -77,7 +77,7 @@ function AddItem({ handleAddItem }) {
                         </div>
                     </div>
                 </div>
-                {/* <button onClick={getApi}>GsET API</button> */}
+                {/* <button onClick={getApi}>GET API</button> */}
             </div>
             <PopupModal yesDonation={yesDonationApple} noDonation={noDonationApple} />
         </div>
