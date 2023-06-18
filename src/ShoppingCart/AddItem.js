@@ -7,6 +7,13 @@ import yoghurtImage from '../itemPictures/yoghurt_image.jpg'
 import appleImage from '../itemPictures/apple_donatable_image.jpg'
 import juiceImage from '../itemPictures/juice_image.jpg'
 
+// const API_URL = 'http://192.168.1.198:8080/api/items';
+
+// function getApi() {
+//     console.log('Making request');
+//     fetch(`${API_URL}`).then((response => console.log('response', response.json())));
+// }
+
 function initModal() {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems, {});
@@ -70,6 +77,7 @@ function AddItem({ handleAddItem }) {
                         </div>
                     </div>
                 </div>
+                {/* <button onClick={getApi}>GsET API</button> */}
             </div>
             <PopupModal yesDonation={yesDonationApple} noDonation={noDonationApple} />
         </div>
